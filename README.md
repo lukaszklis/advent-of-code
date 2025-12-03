@@ -76,6 +76,28 @@ After generating a day, you can:
 - `pnpm format` - Format code with Prettier
 - `pnpm format:check` - Check code formatting
 
+## GitHub Actions
+
+This repository includes a GitHub Actions workflow (`.github/workflows/check.yaml`) that automatically runs on pull requests and pushes to the `main` branch. The workflow:
+
+- Runs the linter (`pnpm lint`)
+- Checks code formatting (`pnpm format:check`)
+- Validates that test files have not been changed to contain hardcoded answers
+
+### Enabling Required Status Checks
+
+To enforce that all checks pass before merging pull requests:
+
+1. Go to your repository **Settings**
+1. Navigate to **Rules** → **Rulesets**
+1. Click **New ruleset** → **New branch ruleset**
+1. Configure the ruleset name and target branches (e.g., `main`)
+1. Enable **Require status checks to pass**
+1. Click **Show additional settings**
+1. Under **Status checks that are required**, click **Add checks**
+1. Type `check` and select the **check** action
+1. Click **Save changes**
+
 ## Excluded Files
 
 - Input files (`input*.txt`)
