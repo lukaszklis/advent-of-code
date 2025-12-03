@@ -20,13 +20,17 @@ pnpm install
 │   │   ├── solution.test.ts
 │   │   ├── README.md
 │   │   ├── input1.txt (not tracked in git)
-│   │   └── input2.txt (not tracked in git)
+│   │   ├── input2.txt (not tracked in git)
+│   │   ├── expectation1.txt (not tracked in git)
+│   │   └── expectation2.txt (not tracked in git)
 │   ├── day02/
 │   │   ├── solution.ts
 │   │   ├── solution.test.ts
 │   │   ├── README.md
 │   │   ├── input1.txt (not tracked in git)
-│   │   └── input2.txt (not tracked in git)
+│   │   ├── input2.txt (not tracked in git)
+│   │   ├── expectation1.txt (not tracked in git)
+│   │   └── expectation2.txt (not tracked in git)
 │   └── ...
 └── ...
 ```
@@ -52,13 +56,16 @@ This will create a new folder `src/day02/` with:
 - `README.md` - Empty file where you can paste the problem descriptions for part 1 and part 2
 - `input1.txt` - Empty file for part 1 input (not tracked in git)
 - `input2.txt` - Empty file for part 2 input (not tracked in git)
+- `expectation1.txt` - Empty file for part 1 expectation (not tracked in git)
+- `expectation2.txt` - Empty file for part 2 expectation (not tracked in git)
 
 After generating a day, you can:
 
-1. Paste the problem descriptions into `README.md`
-2. Add your input data to `input1.txt` and `input2.txt`
-3. Implement your solution in `solution.ts`
-4. Update the expected values in `solution.test.ts`
+1. Paste the problem descriptions into `README.md`.
+1. Add your input data to `input1.txt` and `input2.txt`.
+1. Implement your solution in `solution.ts`.
+1. Update the expected values in `expectation1.txt` and `expectation2.txt`.
+1. Run the tests with `pnpm test` to see if your solution is correct.
 
 ## Scripts
 
@@ -69,6 +76,12 @@ After generating a day, you can:
 - `pnpm format` - Format code with Prettier
 - `pnpm format:check` - Check code formatting
 
-## Notes
+## Excluded Files
 
-- Input files (`input.txt`) are excluded from git via `.gitignore`
+- Input files (`input*.txt`)
+- Expectation files (`expectation*.txt`)
+
+> Why do we exclude these files from git?
+
+AoC is all about the mystery about problems, inputs, and the final answers. Since I don't want to give away the answers,
+I want to keep the mystery alive.
